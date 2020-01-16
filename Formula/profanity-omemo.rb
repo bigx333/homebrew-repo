@@ -25,8 +25,9 @@ class ProfanityOmemo < Formula
 
     def install
       system "./bootstrap.sh" if build.head?
-      system "./configure --enable-omemo", "--disable-dependency-tracking",
+      system "./configure", "--disable-dependency-tracking",
                             "--disable-silent-rules",
+                            "--enable-omemo",
                             "--prefix=#{prefix}"
       system "make", "install"
     end
