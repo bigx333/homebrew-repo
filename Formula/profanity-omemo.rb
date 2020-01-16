@@ -22,6 +22,7 @@ class ProfanityOmemo < Formula
     depends_on "openssl@1.1"
     depends_on "readline"
     depends_on "terminal-notifier"
+    depends_on "libsignal-protocol-c"
 
     def install
       system "./bootstrap.sh" if build.head?
